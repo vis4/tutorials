@@ -49,3 +49,8 @@ a {
   color: #933;
 }
 
+code { 
+	background: #F5F3F3;
+	padding: 2px 1ex;
+	font-size: 90%;
+}
