@@ -17,3 +17,6 @@ Now we open the attribute table (right click on KEN_adm4, open attribute table) 
 
 ![screenshot](/img/qgis-3.png)
 
+QGis allows to export the selected paths by right clicking the selected layer and chosing ``Save selection as..``. Select the Keyhole Markup Language (KML) in the Format dropdown and chose a file name. 
+
+That's it. Now you can import the KML file into FusionTables and start merging it with your table.
