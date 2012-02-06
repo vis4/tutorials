@@ -1,0 +1,16 @@
+---
+layout: default
+title: Gregor Aisch
+---
+
+<div id="home">
+
+  <h1>Blog Posts <a href="atom.xml"><img src="images/rss.png"></a></h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  
+</div>
+
