@@ -11,23 +11,25 @@
 	<div class="post">
 	<h1 class="title">Creating KML maps using QGis</h1>
 	<div class="content">
-		<h2>Find a map source</h2>
+		<p>The goal of this tutorial is to show how to generate KML maps from shapefiles.</p>
+
+<h2>Find a map source</h2>
 
 <p>Obviously, at first you need to find a map source. One great public domain resource is the <a href="http://www.naturalearthdata.com">Natural Earth project</a>. Here you can find shapefiles for things like <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/">administrative boundaries</a>, lakes, rivers etc. Another good ressource is <a href="http://gadm.org">GADM</a>, a project which provides really detailed administrative boundary shapefiles for every country in the world. Just click on Download and select the country you're interested in. For instance, you can download a ZIP that contains <a href="http://www.gadm.org/data2/shp/KEN_adm.zip">shapefiles for five levels of administrative regions of Kenya</a>. Notice that GADM has a non-commercial license, so you need to ask for permission if you want to use the maps for commercial purposes.</p>
 
 <h2>Filter &amp; convert the map source to KML</h2>
 
-<p>Now that you found a shapefile that contains the map data you need, you often need to remove all the parts that you don't need. To do so I use the open source software QuantumGIS, or just <a href="http://qgis.org/">QGIS</a>. Let's assume you've downloaded and unpacked the <a href="http://www.gadm.org/data2/shp/KEN_adm.zip">Kenyan boundaries</a> from GADM. In QGIS you can now open a shapefile using <code>Layer &gt; Add vector layer..</code>. For instance, here's a screenshot of QGIS after loading the KEN_adm4 shapefile.</p>
+<p>Now that you found a shapefile that contains the map data you need, you often need to remove all the parts that you don't need. To do so we can use the open source software QuantumGIS, or just <a href="http://qgis.org/">QGIS</a>. Let's assume you've downloaded and unpacked the <a href="http://www.gadm.org/data2/shp/KEN_adm.zip">Kenyan boundaries</a> from GADM. In QGIS you can now open shapefiles using <code>Layer &gt; Add vector layer..</code>. For instance, here's a screenshot of QGIS after loading the KEN_adm4 shapefile.</p>
 
 <p><img src="/img/qgis-1.png" alt="screenshot" /></p>
 
-<p>Now we open the attribute table (right click on KEN_adm4, open attribute table) and select all regions of Nairobi telling QGis to look for the term "Nairobi" in the field "NAME_1" (which contains the names of the kenyan districts). After closing the attribute table we can make sure that we have selected the correct regions by chosing <code>View &gt; Zoom to Selection</code>.</p>
+<p>Now we open the attribute table (right click on KEN_adm4, open attribute table) and select all regions of Nairobi by telling QGis to look for the term "<em>Nairobi</em>" in the field "<em>NAME_1</em>" (which contains the names of the Kenyan districts). After closing the attribute table we can make sure that we have selected the correct paths by chosing <code>View &gt; Zoom to Selection</code>. The selected paths are highlighted in yellow:</p>
 
 <p><img src="/img/qgis-3.png" alt="screenshot" /></p>
 
 <p>QGis allows to export the selected paths by right clicking the selected layer and chosing <code>Save selection as..</code>. Select the Keyhole Markup Language (KML) in the Format dropdown and chose a file name.</p>
 
-<p>That's it. Now you can import the KML file into FusionTables and start merging it with your table.</p>
+<p>That's it. Now you can import the KML file into FusionTables and start merging it with your data.</p>
 
 	</div>	
 </div>
