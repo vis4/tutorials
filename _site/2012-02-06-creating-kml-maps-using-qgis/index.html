@@ -1,6 +1,35 @@
-<hr />
-<p>layout: post</p>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Creating KML maps using QGis</title>
+	<meta name="author" content="Gregor Aisch" />
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+</head>
+<body>
+	<div class="site">
+	<div class="post">
+	<h1 class="title">Creating KML maps using QGis</h1>
+	<div class="content">
+		<h1>Find a map source</h1>
 
-<h2 id='title_creating_kml_maps_using_qgis'>title: Creating KML maps using QGis</h2>
+<p>Obviously, at first you need to find a map source. One great public domain resource is the <a href="http://www.naturalearthdata.com">Natural Earth project</a>. Here you can find shapefiles for things like <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/">administrative boundaries</a>, lakes, rivers etc. Another good ressource is <a href="http://gadm.org">GADM</a>, a project which provides really detailed administrative boundary shapefiles for every country in the world. Just click on Download and select the country you're interested in. For instance, you can download a ZIP that contains <a href="http://www.gadm.org/data2/shp/KEN_adm.zip">shapefiles for five levels of administrative regions of Kenya</a>. Notice that GADM has a non-commercial license, so you need to ask for permission if you want to use the maps for commercial purposes.</p>
 
-<p>Foo</p>
+<h1>Filter &amp; convert the map source to KML</h1>
+
+<p>Now that you found a shapefile that contains the map data you need, you often need to remove all the parts that you don't need. To do so I use the open source software QuantumGIS, or just <a href="http://qgis.org/">QGIS</a>. Let's assume you've downloaded and unpacked the <a href="http://www.gadm.org/data2/shp/KEN_adm.zip">Kenyan boundaries</a> from GADM. In QGIS you can now open a shapefile using "Layer > Add vector layer...". For instance, here's a screenshot of QGIS after loading the KEN_adm4 shapefile.</p>
+
+<p><img src="http://vis4.net/tmp/qgis-1.png" alt="screenshot" /></p>
+
+<p>Now I open the attribute table (right click on KEN_adm4, open attribute table)</p>
+
+<p><code>javascript
+window.alert("Hello World");
+</code></p>
+
+	</div>	
+</div>
+  
+	</div>
+</body>
+</html>
