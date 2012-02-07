@@ -5,13 +5,19 @@
 	<title>Gregor Aisch</title>
 	<meta name="author" content="Gregor Aisch" />
 	<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+	<script type="text/javascript" src="/js/ender.min.js"></script>
+	<script type="text/javascript">
+$.domReady(function() { $('.post img').each(function(el){ var c=$('<div class="img" />'), p = $(el).parent(); c.append(el); p.append(c); }) });
+	</script>
 </head>
 <body>
 	<div class="site">
 	<div id="home">
 
-  <h1 class="title">Tutorials<h1>
+  <h1 class="title">Tutorials</h1>
   <ul class="posts">
+    
+      <li><span>07 Feb 2012</span> &raquo; <a href="/2012-02-07-fec">Visualizing Contributions to the 2012 US Presidential Elections</a></li>
     
       <li><span>06 Feb 2012</span> &raquo; <a href="/2012-02-06-creating-kml-maps-using-qgis">Creating KML maps using QGis</a></li>
     

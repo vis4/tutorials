@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Visualizing Contributions to the 2012 US Presidential Elections</title>
+	<meta name="author" content="Gregor Aisch" />
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+	<script type="text/javascript" src="/js/ender.min.js"></script>
+	<script type="text/javascript">
+$.domReady(function() { $('.post img').each(function(el){ var c=$('<div class="img" />'), p = $(el).parent(); c.append(el); p.append(c); }) });
+	</script>
+</head>
+<body>
+	<div class="site">
+	<div class="post">
+	<h1 class="title">Visualizing Contributions to the 2012 US Presidential Elections</h1>
+	<div class="content">
+		<h2>When do you need to visualise a dataset to explore it and find a story? When don’t you need to?</h2>
+
+<p>The bits and bytes data is made of are invisible. That's why we need to visualise them. In a broader understanding of the term 'visualising', even the image on a computer screen that we see after opening data in a text editor or spreadsheet software can be considered as data visualisation. So the questions is not weather journalists do need visualisation or not, but which kind of visualisation may be useful for journalists.</p>
+
+<p>Humans are well trained to use their high-performance visual perception system to make all kinds of decisions for our life. But, in contrast to machines, we are incredibly bad in reading long lists of numbers presented in a table.</p>
+
+<h2>How do you go about discovering a story? What tools do you use? What “protocol” do you follow? What clues do you follow, what do you pay attention to? (lessons, tips, advice).</h2>
+
+<p>Discovering a story is a rather big goal. In fact, there is no way or "protocol" that will guarantee us to discover a story. Instead of finding stories, I like to think of finding insights in the data. Most of these insights might be already known (but maybe not proven), some insights might be completely new to us. Some of those new instights might actually mean the start of a story, while others could just be errors in the data.</p>
+
+<p>Let's imagine the moment when we start to work with a previously unseen dataset. In most cases we are already filled up with assumptions about the data. A good way to start the visualisation work is to write down those assumptions. They can serve as a guide through the visualisation process.</p>
+
+<p>The choice of tools to visualise the data highly depend on the type of data. There is a wide range of open source tools available for nearly every data type.</p>
+
+<h2>Examples of how to explore a dataset with a visualisation tool with a step by step description of the “protocol” followed to find the story.</h2>
+
+<p>As an example I chose the US Presidtential Campaign Finance database which contains 450,000 contributions to the US Presidential candidates. The CSV file is 60 megabytes big and way to large to load into Excel.</p>
+
+<p>Assumptions:</p>
+
+<ul>
+<li>Obama get's the most contributions (since he's the president and has the highest popularity)</li>
+<li>The number of donations increases as the time moves closer to election date</li>
+<li>The big donations are coming from corporations while the smaller donations are coming from individuals</li>
+<li>Obama gets comparably more donations from individuals than republican candidates.</li>
+</ul>
+
+
+<p>As a first step I simply visualised all contributed amounts over time:</p>
+
+<p><img src="/img/ddjbook/amounts.png" alt="contributed amounts over time" /></p>
+
+<p>In this plot we can see that almost all donations are very very small compared to three really big outliers. Furhter investigation returns that these huge contributions, which are labeled with "<em>Obama Victory Fund 2012</em>" were made on June 29th ($450k), September 29th ($1.5mio) and December 30th ($1.9mio).</p>
+
+<p>Let's see how the image changes if we cut these (exceptional) contributions.</p>
+
+<p><img src="/img/ddjbook/amounts-wo-ovf.png" alt="contributed without Obama Victory Fund" /></p>
+
+<p>Surprisingly we find that a lot of the contributions have negative amounts.</p>
+
+<p>To get more insights of the data, I chose to visualise the decimal logarithms of the amounts. On decimal logscales, an amount of $100 becomes 2 (since 10<sup>2</sup> = 100) while an amount of $1,000,000 would become 6 (10<sup>6).</sup></p>
+
+<p><img src="/img/ddjbook/amounts-log-scale.png" alt="log10 of contributed amounts over time" /></p>
+
+<p>Now we can see some very interesting new insights:</p>
+
+<ul>
+<li>The vast amount of contribution is within the range of $10 and $1000.</li>
+<li>The contributions seem to start in three different phases:</li>
+</ul>
+
+
+	</div>	
+</div>
+  
+	</div>
+</body>
+</html>
