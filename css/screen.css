@@ -9,9 +9,9 @@ html, body {
 
 body {
   background-color: white;
-  font: 15px Palatino, georgia, "times new roman", serif;
+  font: 13pt Palatino, georgia, "times new roman", serif;
   *font-size: small;
-  color: #444;
+  color: #333;
   line-height: 1.5em;
 }
 
@@ -26,13 +26,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.title {
-	font-size: 27px;
-	color: #222;
+	font-size: 26pt;
+	color: #944;
 	font-weight: bold;
-	margin: 50px 0;
-	text-transform: uppercase;
+	margin: 50px 0 50px -25px;
+	text-indent: -10px;
 	font-family: Lato, Helvetica Neue, Arial;
-	line-height: 1.2em;
+	line-height: 1.25em;
 }
 
 .post img {
