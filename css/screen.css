@@ -36,14 +36,14 @@ h1.title {
 }
 
 .post img {
-	max-width: 1200px;	
+	max-width: 1000px;	
 }
 
 .post .img {
-	 left: -300px;
+	left: -200px;
     position: relative;
     text-align: center;
-    width: 1200px;
+    width: 1000px;
 }
 
 h1 {

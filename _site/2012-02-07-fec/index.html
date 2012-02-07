@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Visualizing Contributions to the 2012 US Presidential Elections</title>
+	<title>Analyzing Contributions to the 2012 US Presidential Elections through Visualization</title>
 	<meta name="author" content="Gregor Aisch" />
 	<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
 	<script type="text/javascript" src="/js/ender.min.js"></script>
@@ -13,7 +13,7 @@ $.domReady(function() { $('.post img').each(function(el){ var c=$('<div class="i
 <body>
 	<div class="site">
 	<div class="post">
-	<h1 class="title">Visualizing Contributions to the 2012 US Presidential Elections</h1>
+	<h1 class="title">Analyzing Contributions to the 2012 US Presidential Elections through Visualization</h1>
 	<div class="content">
 		<p>Let's look at the US Presidtential Campaign Finance database which contains about 450,000 contributions to US Presidential candidates. The CSV file is 60 megabytes and way to large to handle it easily in Excel.</p>
 
@@ -30,27 +30,33 @@ $.domReady(function() { $('.post img').each(function(el){ var c=$('<div class="i
 
 <p>As a first step I simply visualised all contributed amounts over time:</p>
 
-<p><img src="/img/ddjbook/amounts.png" alt="contributed amounts over time" /></p>
+<p><img src="/img/ddjbook/all.png" alt="contributed amounts over time" /></p>
 
 <p>In this plot we can see that almost all donations are very very small compared to three really big outliers. Furhter investigation returns that these huge contributions, which are labeled with "<em>Obama Victory Fund 2012</em>" were made on June 29th ($450k), September 29th ($1.5mio) and December 30th ($1.9mio).</p>
 
-<p>Let's see how the image changes if we cut these (exceptional) contributions.</p>
+<p>The dataset holds a column for the form type which classifies the contributions in three categories: contributions by individuals, refunds to individuals and contributions by authorized comittees. For now let us focus on the contributions that were made by or refunded to individuals.</p>
 
-<p><img src="/img/ddjbook/amounts-wo-ovf.png" alt="contributed without Obama Victory Fund" /></p>
+<p><img src="/img/ddjbook/indiv-refunds.png" alt="Contributions by individuals" /></p>
 
-<p>Surprisingly we find that a lot of the contributions have negative amounts.</p>
-
-<p>To get more insights of the data, I chose to visualise the decimal logarithms of the amounts. On decimal logscales, an amount of $100 becomes 2 (since 10<sup>2</sup> = 100) while an amount of $1,000,000 would become 6 (10<sup>6).</sup></p>
-
-<p><img src="/img/ddjbook/amounts-log-scale.png" alt="log10 of contributed amounts over time" /></p>
-
-<p>Now we can see some very interesting new insights:</p>
+<p>According to the <a href="http://www.fec.gov/pages/brochures/fecfeca.shtml#Contribution_Limits">contribution limits placed by the FECA</a> individuals are not allowed to donate more than $2500 to each candidate. As we see in the plot, there are numberous donations made above that limit. In particular two big contributions in May attract our attention. It seems that they are 'mirrored' in June and July. Further investigation in the data reveals the following transactions:</p>
 
 <ul>
-<li>The vast amount of contribution is within the range of $10 and $1000.</li>
-<li>The contributions seem to start in three different phases:</li>
+<li>On May 10 <em>Stephen James Davis</em>, San Francisco, employed at Banneker Partners (attorney), has donated <strong>$25,800</strong> to Obama.</li>
+<li>On May 25 <em>Cynthia Murphy</em>, Little Rock, employed at the Murphy Group (public relations), has donated <strong>$33,300</strong> to Obama.</li>
+<li>On June 15 the amount of <strong>$30,800</strong> was refunded to <em>Cynthia Murphy</em>, which reduced the donated amount to $2500.</li>
+<li>On July 8 the amount <strong>$25,800</strong> was refunded to <em>Stephen James Davis</em>, which reduced the donated amount to $0.</li>
 </ul>
 
+
+<p>What's intersting about these numbers? The $30,800 refunded to Cynthia Murphy equals the maximum amount individuals may give to <em>national party committees</em> per year. Maybe she just wanted to combine both donations in one transaction which was rejected. The $25,800 refunded to Stephen James Davis possibly equals the $30,800 minus $5000 (the contribution limit to any other political committee). Let's get rid of those outliers for the moment to give the data more space.</p>
+
+<p><img src="/img/ddjbook/contr-refunds2.png" alt="Contributions by individuals" /></p>
+
+<p>Data visualization destroys our initial assumptions and pre-judgements on the data.</p>
+
+<p>Maybe we will learn more about the negative contributions by looking at the refunds to individuals.</p>
+
+<p><img src="/img/ddjbook/refunds.png" alt="Refunds to individuals" /></p>
 
 	</div>	
 </div>
