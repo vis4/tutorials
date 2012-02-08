@@ -25,14 +25,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5em;
 }
 
+.post h2 { margin-top: 2.5em; }
+
+h3, h4, h5, h6 {
+  font-size: 105%;
+}
+
 h1.title {
-	font-size: 26pt;
+	font-size: 22pt;
 	color: #944;
 	font-weight: bold;
-	margin: 50px 0 50px -25px;
-	text-indent: -10px;
-	font-family: Lato, Helvetica Neue, Arial;
+	margin: 50px 0;
+	font-family: Nevis, Futura, Lato, Helvetica Neue, Arial;
 	line-height: 1.25em;
+	text-transform: uppercase;
 }
 
 .post img {
