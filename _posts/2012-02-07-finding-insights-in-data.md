@@ -118,11 +118,11 @@ Now, let us proceed with a bigger picture of the dataset. As a first step I *vis
 
 ![contributed amounts over time](/img/ddjbook/all.png)
 
-While the contributions by Super PACs alone is undoubtedly the biggest story in the data, it might be also interesting to look beyond it. The point now is these big contributions disturb our view on the smaller contributions coming from individuals, so we're going to remove them from the data (*transform*). After *visualising* again, we can see that 
+While the contributions by Super PACs alone is undoubtedly the biggest story in the data, it might be also interesting to look beyond it. The point now is that these big contributions disturb our view on the smaller contributions coming from individuals, so we're going to remove them from the data. This transform is commonly known as outlier removal. After visualizing again, we can see that most of the donations are within the range of $10k and -$5k.
 
 ![contributions without super pacs](/img/ddjbook/contr-wo-superpac.png)
 
-According to the [contribution limits placed by the FECA](http://www.fec.gov/pages/brochures/fecfeca.shtml#Contribution_Limits) individuals are not allowed to donate more than $2500 to each candidate. As we see in the plot, there are numberous donations made above that limit. In particular two big contributions in May attract our attention. It seems that they are 'mirrored' in negative amounts (refunds) June and July. Further investigation in the data reveals the following transactions:
+According to the [contribution limits placed by the FECA](http://www.fec.gov/pages/brochures/fecfeca.shtml#Contribution_Limits) individuals are not allowed to donate more than $2500 to each candidate. As we see in the plot, there are numerous donations made above that limit. In particular two big contributions in May attract our attention. It seems that they are 'mirrored' in negative amounts (refunds) June and July. Further investigation in the data reveals the following transactions:
 
 * On May 10 *Stephen James Davis*, San Francisco, employed at Banneker Partners (attorney), has donated **$25,800** to Obama.
 * On May 25 *Cynthia Murphy*, Little Rock, employed at the Murphy Group (public relations), has donated **$33,300** to Obama.
