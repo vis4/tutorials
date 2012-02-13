@@ -85,14 +85,12 @@ Now the time has come where we can really move on. The good news is that we've a
 
 ### Which tools to use
 
-In general, there's no . Every tool available at the moment is good at something.
+Every data visualization tool available is good at something. However, here are a few requirements for choosing the right tools:
 
-Here are a few advices for choosing the right tools:
+* Visualisation and data wrangling should be easy and cheap. If changing parameters of the visualizations takes you hours, you won't experiment that much. That doesn't necessarily mean that you don't need to learn how to use the tool. But once you learned it, it should be really efficient.
+* For some reasons it makes much sense to choose a tool that covers both the data wrangling and the data visualisation issues. Separating the tasks in different tools means that you have to import and export your data very often.
 
-* Visualisation and data wrangling should be easy. If changing parameters of the visualizations takes you hours, you won't experiment that much. That doesn't necessarily mean that you don't need to learn how to use the tool. But once you learned it, it should be efficient.
-* For some reasons it makes much sense to choose a tool that covers both the data wrangling and the data visualisation issues. Separating the tasks in different tools possibly means that you have to import and export your data very often.
-
-The example visualizations in the next section were created using the R project, which is kind of the swiss army knife of scientific data visualisation.
+The sample visualizations in the next section were created using the R, which is kind of the swiss army knife of scientific data visualisation.
 
 ## Example session: making sense of US election contribution data
 
