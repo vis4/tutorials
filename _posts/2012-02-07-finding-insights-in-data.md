@@ -28,9 +28,6 @@ In order to make the finding of insights in data more effective, I find the foll
 
 Each of these steps will be discussed further in this section.
 
-### How to start
-
-
 
 ### Visualise data
 
@@ -43,7 +40,9 @@ Some of the most important types of visualisations:
 * maps - displaying geographical context
 * graphs - displaying relations in networks
 
-The choice of which visualisation to use largely depends on the dataset and what you want to show. 
+	Todo: 
+	- explain the vis types in more detail (provide examples) 
+	- maybe mention a few tools which can be used for data vis.
 
 ### Analyse and interpret what you see
 
