@@ -1,11 +1,14 @@
 ---
 layout: default
-title: Gregor Aisch
+title: Data Journalism Tutorials
 ---
 
 <div id="home">
 
-  <h1 class="title">Tutorials & Resources for Data Journalists</h1>
+  <h1 class="title">Data Journalism Tutorials</h1>
+
+  <p>On this site I will collect material of which I think it may be useful for data journalists. </p>
+
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>

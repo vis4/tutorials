@@ -1,4 +1,5 @@
 markdown: rdiscount
 pygments: true
+auto: true
 permalink: /:year-:month-:day-:title
 exclude: [push,js/node_modules]

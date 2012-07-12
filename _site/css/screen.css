@@ -10,7 +10,6 @@ html, body {
 body {
   background-color: white;
   font: 13pt Palatino, georgia, "times new roman", serif;
-  *font-size: small;
   color: #333;
   line-height: 1.5em;
 }
@@ -78,4 +77,12 @@ blockquote {
 	font-style: italic;
 	margin: 0 0 0 2em;
 	color: #777;
+}
+
+.footer {
+	margin-top: 3em;
+	border-top: 1px solid silver;
+	padding-top: 1ex;
+	font-style: italic;
+	
 }
